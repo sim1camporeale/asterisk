@@ -1822,7 +1822,7 @@ static int chan_pjsip_digit_begin(struct ast_channel *chan, char digit)
 
 	if (!channel || !channel->session) {
 		/* This happens when the channel is hungup while a DTMF digit is playing. See ASTERISK #377 */
-		ast_debug(3, "Channel %s disappeared while calling digit_begin\n", ast_channel_name(ast));
+		ast_debug(3, "Channel %s disappeared while calling digit_begin\n", ast_channel_name(chan));
 		return -1;
 	}
 
